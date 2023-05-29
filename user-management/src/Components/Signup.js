@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { Box, Button, TextField, Typography } from "@mui/material";
+import { useNavigate } from 'react-router-dom';
 
-const User = () => {
+
+const Signup = () => {
+    const navigate = useNavigate();
 
     const [username, setUsername] = useState("");
     const [isUsername, setIsUsername] = useState(true);
@@ -53,9 +56,10 @@ const User = () => {
             maxWidth={400}
             margin={"auto"}
             marginTop={5}
-            padding={3}
+            marginBottom={5}
+            padding={2}
             borderRadius={5}
-            boxShadow={"5px 10px #ccc"}
+            boxShadow={"0px 0px 10px #ccc"}
             sx={{
               ":hover": {
                 boxShadow: "0px 5px 10px #ccc",
@@ -80,6 +84,12 @@ const User = () => {
               type={"text"}
               variant="outlined"
               placeholder="e.g: GenZ"
+              InputProps={{
+                style: {
+                  borderRadius: "10px",
+                  height: '46px'
+                }
+              }}
               onChange={handleUsernameChange}
               error={!isUsername}
               helperText={!isUsername ? "Username is required" : ""}
@@ -100,6 +110,12 @@ const User = () => {
               variant="outlined"
               placeholder="e.g: genz@abc.com"
               value={email}
+              InputProps={{
+                style: {
+                  borderRadius: "10px",
+                  height: '46px'
+                }
+              }}
               onChange={handleEmailChange}
               error={!isEmailValid}
               helperText={!isEmailValid ? "Invalid email format" : ""}
@@ -120,6 +136,12 @@ const User = () => {
               type="password"
               variant="outlined"
               value={password}
+              InputProps={{
+                style: {
+                  borderRadius: "10px",
+                  height: '46px'
+                }
+              }}
               onChange={handlePasswordChange}
               error={!isPasswordValid}
               helperText={!isPasswordValid ? "Invalid password format" : ""}
@@ -128,11 +150,14 @@ const User = () => {
             <Button
               marginTop={3}
               sx={{
-                borderRadius: 1,
+                borderRadius: 10,
+                paddingTop: 1.5,
+                paddingBottom: 1.5,
                 marginBottom: 2,
                 marginTop: 4,
                 backgroundColor: "black",
-                fontSize: 12,
+                textAlign: "center",
+                fontSize: 14,
               }}
               variant="contained"
             >
@@ -140,7 +165,10 @@ const User = () => {
             </Button>
             <Button
               marginTop={3}
-              sx={{ borderRadius: 1, fontSize: 12 }}
+              sx={{ borderRadius: 1, fontSize: 14,
+                borderRadius: 10,
+                paddingTop: 1.5,
+                paddingBottom: 1.5, }}
               variant="contained"
             >
               Sign up with Google
@@ -156,9 +184,15 @@ const User = () => {
             >
               Already have an account?
               <Button
-                marginTop={3}
+              onClick={
+                 () => {
+                  navigate('/login');
+                 }
+              }
+                
+              marginTop={3}
                 style={{ height: "25px" }}
-                sx={{ borderRadius: 5, marginLeft: 4, fontSize: 18 }}
+                sx={{ borderRadius: 5, marginLeft: 2, fontSize: 18 }}
               >
                 Login
               </Button>
@@ -168,3 +202,4 @@ const User = () => {
       </div>
     );
   };
+ export  default Signup;

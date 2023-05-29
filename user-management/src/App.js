@@ -1,14 +1,23 @@
 import React, { useState } from "react";
-import { Box, Button, TextField, Typography } from "@mui/material";
 import Navbar from "./Components/Navbar";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Routes, Route } from 'react-router-dom';
+import Signup from "./Components/Signup";
+import Login from "./login";
 
-const User = () => {
+
+const App = () => {
 
   return(
-    <React.Fragment><Navbar/></React.Fragment>
+    <>
+      <Navbar/>
+     <Routes>
+          <Route path="/" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+       </Routes>
+    </>
      
   );
 };
 
-export default User;
+export default App;
+   
