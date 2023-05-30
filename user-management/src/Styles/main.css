@@ -1,16 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
 
 * {
+	
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	font-family: "Titillium Web", sans-serif;
+	font-family: "cursive", cursive;
 }
 
 :root {
-	--mainColor: #29335c;
-	--mainColorLight: #5767aa;
-	--secondaryColor: #db2b39;
+	--secondaryColor: rgb(0, 195, 255);
 	--textColor: #eee;
 }
 
@@ -18,7 +17,7 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: 80px;
+	height: 60px;
 	padding: 0 2rem;
 	background-color: Black;
 	color: var(--textColor);
@@ -32,6 +31,11 @@ nav a {
 
 nav a:hover {
 	color: var(--secondaryColor);
+}
+
+.logo{
+	color: #eee;
+	font-family: cursive;
 }
 
 header .nav-btn {
@@ -50,6 +54,7 @@ header div,
 nav {
 	display: flex;
 	align-items: center;
+	height: 50px;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -69,7 +74,7 @@ nav {
 		align-items: center;
 		justify-content: center;
 		gap: 1.5rem;
-		background-color: var(--mainColor);
+		background-color: black;
 		transition: 1s;
 	}
 
