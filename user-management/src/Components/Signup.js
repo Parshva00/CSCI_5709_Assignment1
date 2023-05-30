@@ -65,14 +65,15 @@ const Signup = () => {
           }}
         >
           <Typography
+          
             variant="h3"
             padding={2}
             textAlign="center"
-            sx={{ fontSize: 24 }}
+            sx={{ fontSize: 24, fontFamily: "cursive" }}
           >
             Sign up
           </Typography>
-          <Typography variant="h6" padding={1} sx={{ fontSize: 16 }}>
+          <Typography variant="h6" padding={1} sx={{ fontSize: 16, fontFamily:"cursive" }}>
             Username
           </Typography>
           <TextField
@@ -97,7 +98,7 @@ const Signup = () => {
           <Typography
             variant="h6"
             padding={1}
-            sx={{ fontSize: 16 }}
+            sx={{ fontSize: 16, fontFamily:"cursive" }}
             textAlign={"left"}
           >
             Email
@@ -112,6 +113,7 @@ const Signup = () => {
               style: {
                 borderRadius: "10px",
                 height: "46px",
+                fontFamily:"cursive"
               },
             }}
             onChange={handleEmailChange}
@@ -121,7 +123,7 @@ const Signup = () => {
           />
           <Typography
             variant="h6"
-            sx={{ fontSize: 16 }}
+            sx={{ fontSize: 16,fontFamily:"cursive" }}
             padding={1}
             textAlign={"left"}
           >
@@ -156,6 +158,7 @@ const Signup = () => {
               backgroundColor: "black",
               textAlign: "center",
               fontSize: 14,
+              fontFamily:"cursive"
             }}
             variant="contained"
           >
@@ -169,18 +172,19 @@ const Signup = () => {
               borderRadius: 10,
               paddingTop: 1.5,
               paddingBottom: 1.5,
+              fontFamily:"cursive"
             }}
             variant="contained"
           >
             Sign up with Google
           </Button>
-          <Typography variant="h5" padding={1} textAlign={"center"}>
+          <Typography variant="h5" padding={1} textAlign={"center"} sx={{ fontFamily:"cursive" }}>
             Or
           </Typography>
           <Typography
             variant="h6"
             // padding={1}
-            sx={{ fontSize: 20, marginLeft: 2 }}
+            sx={{ fontSize: 20, marginLeft: 2, fontFamily:"cursive" }}
             textAlign={"left"}
           >
             Already have an account?
@@ -190,7 +194,7 @@ const Signup = () => {
               }}
               marginTop={3}
               style={{ height: "25px" }}
-              sx={{ borderRadius: 5, marginLeft: 2, fontSize: 18 }}
+              sx={{ borderRadius: 5, marginLeft: 2, fontSize: 18, fontFamily:"cursive" }}
             >
               Login
             </Button>
