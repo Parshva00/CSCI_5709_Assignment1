@@ -24,14 +24,14 @@ const login = () => {
             variant="h3"
             padding={2}
             textAlign="center"
-            sx={{ fontSize: 24 }}
+            sx={{ fontSize: 24, fontFamily: "cursive" }}
           >
             Login
           </Typography>
           <Typography
             variant="h6"
             padding={1}
-            sx={{ fontSize: 16 }}
+            sx={{ fontSize: 16, fontFamily: "cursive" }}
             textAlign={"left"}
           >
             Email
@@ -39,7 +39,7 @@ const login = () => {
           <TextField type="Email" variant="outlined" />
           <Typography
             variant="h6"
-            sx={{ fontSize: 16 }}
+            sx={{ fontSize: 16, fontFamily: "cursive" }}
             padding={1}
             textAlign={"left"}
           >
@@ -62,10 +62,11 @@ const login = () => {
               marginLeft: 2,
               marginRight: 2,
               marginTop: 4,
-              height:40,
+              height: 40,
               backgroundColor: "black",
               textAlign: "center",
               fontSize: 14,
+              fontFamily: "cursive",
             }}
             variant="contained"
           >
@@ -74,16 +75,25 @@ const login = () => {
           <Button
             marginTop={3}
             style={{ height: "25px" }}
-            sx={{ borderRadius: 5, marginLeft: 5, fontSize: 18 }}
+            sx={{
+              borderRadius: 5,
+              marginLeft: 5,
+              fontSize: 18,
+              fontFamily: "cursive",
+            }}
             textAlign={"right"}
           >
             Forgot Password?
           </Button>
-          <Typography variant="h5" padding={1} textAlign={"center"}>
+          <Typography
+            variant="h5"
+            padding={1}
+            textAlign={"center"}
+            style={{ fontFamily: "cursive" }}
+          >
             Or
           </Typography>
           <Button
-       
             sx={{
               borderRadius: 10,
               paddingTop: 1.5,
@@ -91,9 +101,10 @@ const login = () => {
               marginBottom: 2,
               marginLeft: 2,
               marginRight: 2,
-              height:40,
+              height: 40,
               textAlign: "center",
               fontSize: 14,
+              fontFamily: "cursive",
             }}
             var
             variant="contained"
